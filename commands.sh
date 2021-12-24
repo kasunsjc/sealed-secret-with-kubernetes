@@ -8,5 +8,5 @@ kubectl apply -f bitnami-sealed-controller/controller.yaml -n kube-system
 brew install kubeseal #macOS
 
 
-kubeseal -n sealed-secret-application < unsealed_secrets/db-creds.yml > ../manifests/db-creds-encrypted.yaml -o yaml
-kubeseal -n sealed-secret-application  < unsealed_secrets/paypal-cert.yml > ../manifests/paypal-cert-encrypted.yaml -o yaml
+kubeseal -n sealed-secret-application < ./unsealed_secrets/db-creds.yml > ./manifests/db-creds-encrypted.yaml -o yaml
+kubeseal -n sealed-secret-application  < ./unsealed_secrets/paypal-cert.yml > ./manifests/paypal-cert-encrypted.yaml -o yaml
